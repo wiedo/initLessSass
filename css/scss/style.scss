@@ -1,0 +1,32 @@
+@import "presets";
+
+/* style */
+
+//	Default Layout: 992px. 
+//	Gutters: 24px.
+//	Outer margins: 48px.
+//	Leftover space for scrollbars @1024px: 32px.
+//-------------------------------------------------------------------------------
+//cols    1     2      3      4      5      6      7      8      9      10
+//px      68    160    252    344    436    528    620    712    804    896
+
+@mixin col($amount, $padding: 10, $border: 0, $addwith: 0){
+//col (=68px)+margin (=24px), last margin (=24px) is extracted (because that's an actual margin)
+//20px are extracted because of the default padding of 10px.
+//addwith will be added to make some exclusion to the standard less rules
+  width: (92px * $amount) - 24px - ($border * 2) - ($padding * 2) + $addwith;
+  margin-right: 24px;
+  float: left;
+}
+
+body {
+	width: 896px;
+	padding: 72px 48px 84px;
+	background: rgb(232,232,232);
+	color: rgb(60,60,60);
+	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+
+@import "tablet";
+@import "mobile";
+@import "wide-mobile";

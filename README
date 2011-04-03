@@ -1,0 +1,7 @@
+This is a project to help you (and especially me) to start a HTML5 project very quickly. I took the best elements of:
+ * Initializr: http://initializr.com/ - based on HTML5 Boilerplate
+ * Less Framework 4: http://lessframework.com/
+ 
+ And converted it to Sass: http://sass-lang.com/ (SCSS format). I also trying to create some handy mixins to create Less columns more easily.
+ 
+ Name is based on the three frameworks i'm using. initLessSass. Have fun!
